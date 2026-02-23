@@ -28,7 +28,20 @@ const FormContextProvider = ({ children }: { children: React.ReactNode }) => {
   });
 
   function handleChange<K extends keyof FormType>(name: K, value: FormType[K]) {
-    setForm((prev) => ({ ...prev, [name]: value }));
+    setForm((prev) => {
+      const updated = { ...prev, [name]: value };
+
+      if (name === "province") {
+        updated.regencies = null;
+        updated.districts = null;
+      }
+
+      if (name === "regencies") {
+        updated.districts = null;
+      }
+
+      return updated;
+    });
   }
 
   function handleReset() {
