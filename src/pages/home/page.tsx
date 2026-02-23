@@ -43,6 +43,12 @@ const Page = () => {
       />
 
       <button onClick={handleReset}>Reset</button>
+
+      <>
+        <div>{form.province?.name ?? ""}</div>
+        <div>{form.regencies?.name ?? ""}</div>
+        <div>{form.districts?.name ?? ""}</div>
+      </>
     </>
   );
 };
