@@ -1,3 +1,4 @@
+import BreadCrumb from "@/components/BreadCrumb";
 import { ComboBox } from "@/components/ComboBox";
 import { useFormContext } from "@/context/hooks";
 import type { getData } from "@/service";
@@ -49,6 +50,8 @@ const Page = () => {
         <div>{form.regencies?.name ?? ""}</div>
         <div>{form.districts?.name ?? ""}</div>
       </>
+
+      <BreadCrumb />
     </>
   );
 };
