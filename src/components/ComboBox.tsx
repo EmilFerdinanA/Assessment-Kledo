@@ -42,7 +42,7 @@ export function ComboBox<T, K extends string>({
   }, []);
 
   return (
-    <div className="relative w-64" ref={wrapperRef}>
+    <div className="relative w-full" ref={wrapperRef}>
       <button
         type="button"
         disabled={disabled}
